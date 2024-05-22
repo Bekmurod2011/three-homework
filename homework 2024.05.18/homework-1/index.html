@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button>Add</button>
+    <h1></h1>
+
+    <script>
+        let btn = document.querySelector("button");
+        let inp = document.querySelector("input");
+        let h1 = document.querySelector("h1");
+
+        btn.addEventListener("click", () => {
+            if(inp.value === ""){
+                alert("Error");
+            } else {
+                h1.innerHTML += inp.value + "<br>";
+                inp.value = "";
+            }
+        });
+    </script>
+</body>
+</html>
